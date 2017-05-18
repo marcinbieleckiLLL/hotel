@@ -28,6 +28,10 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
+	<mvc:interceptors>
+		<bean class="hotel.interceptor.Interceptor" />
+	</mvc:interceptors>
+	
 	<bean id= "messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basename" value="messages" />
 	</bean>
